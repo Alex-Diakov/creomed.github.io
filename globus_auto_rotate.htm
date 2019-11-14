@@ -1,0 +1,34 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"> </script>
+<script type="text/javascript" src="jquery-beono-globus.js"></script> 
+<style>
+.beonoGlobus {
+ position: relative;
+ overflow: hidden;
+}
+
+.loading {
+ background: url(loader.gif) no-repeat center center;
+}
+</style>
+  <div class="beonoGlobus"> 
+  <img alt="photo" src="images/in.jpg"/> 
+</div> 
+
+<script type="text/javascript"> 
+
+	(function($) { 
+		$(function() {
+			var objs = $(".beonoGlobus").beonoGlobus({
+			framesCount: 12,
+			api: 'all',
+			rotationSpeed: 100, 
+			onReady: function () {
+					this.setRotationMode("auto");
+					this.setRotationSpeed(100);
+					this.rotateLeft(50);
+				}
+			});
+		});
+	})(jQuery);
+
+</script> 
